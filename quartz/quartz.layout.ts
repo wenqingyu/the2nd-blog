@@ -1,44 +1,45 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import CustomFooter from "./components/CustomFooter"
+import BilingualTitle from "./components/BilingualTitle"
+import BilingualArticleTitle from "./components/BilingualArticleTitle"
+import BilingualExplorer from "./components/BilingualExplorer"
+import CustomTagList from "./components/CustomTagList"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
-  afterBody: [],
-  footer: Component.Footer({
+  header: [
+    Component.MobileOnly(Component.Spacer()),
+    Component.Search(),
+    Component.Darkmode(),
+  ],
+  footer: CustomFooter({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/wenqingyu/the2nd-blog",
+      About: "#",
     },
   }),
+  afterBody: [],
 }
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
-    }),
-    Component.ArticleTitle(),
+    BilingualArticleTitle(),
     Component.ContentMeta(),
-    Component.TagList(),
+    CustomTagList()
   ],
   left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
+    BilingualTitle({
+      englishTitle: "The 2nd Blog",
+      chineseTitle: "第二博客",
+      isSiteTitle: true
     }),
-    Component.Explorer(),
+    BilingualExplorer(),
+    Component.MobileOnly(Component.Spacer()),
+    Component.Search(),
+    Component.Darkmode(),
   ],
   right: [
     Component.Graph(),
@@ -47,22 +48,19 @@ export const defaultContentPageLayout: PageLayout = {
   ],
 }
 
-// components for pages that display lists of pages  (e.g. tags or folders)
+// components for pages that display lists of pages (e.g. tags or index)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [],
   left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
+    BilingualTitle({
+      englishTitle: "The 2nd Blog",
+      chineseTitle: "第二博客",
+      isSiteTitle: true
     }),
-    Component.Explorer(),
+    BilingualExplorer(),
+    Component.MobileOnly(Component.Spacer()),
+    Component.Search(),
+    Component.Darkmode(),
   ],
   right: [],
 }

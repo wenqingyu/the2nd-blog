@@ -1,40 +1,60 @@
 ---
 title: The 2nd Blog
+chineseTitle: 第二博客
 publish: true
+author: Thomas Yu
+author_link: https://x.com/wenqingyu
 ---
 
-# The 2nd Blog
+<p>A place for thoughts, research and explorations</p>
 
-Welcome to **The 2nd Blog** — my digital second brain. Here, I collect, connect, and share thoughts, research, and opinions across multiple topics and languages. This space is designed to help me (and you!) explore ideas, revisit insights, and discover new connections.
+<div class="cards-layout">
+  <div class="card">
+    <div class="card-content">
+      <div class="tags">
+        <a href="/tags/research">RESEARCH</a>
+        <a href="/tags/中文">中文</a>
+      </div>
+      <h2 class="card-title"><a href="/Research" class="hover-underline">Research & Notes</a></h2>
+      <p class="card-excerpt">Structured knowledge, references, and ongoing investigations.</p>
+      <div class="card-meta">
+        <span>ANALYSIS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <div class="tags">
+        <a href="/tags/opinion">OPINION</a>
+        <a href="/tags/english">ENGLISH</a>
+      </div>
+      <h2 class="card-title"><a href="/2nd%20opinion" class="hover-underline">Second Opinions</a></h2>
+      <p class="card-excerpt">Personal takes, reflections, and commentary on various topics.</p>
+      <div class="card-meta">
+        <span>PERSPECTIVE</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+## SELECTED NOTES
+
+<div class="cards-layout">
+  <div class="card">
+    <div class="card-content">
+      <div class="tags">
+        <a href="/tags/featured">FEATURED</a>
+      </div>
+      <h2 class="card-title"><a href="#" class="hover-underline">Coming Soon</a></h2>
+      <p class="card-excerpt">More content will be added here as the digital garden grows.</p>
+      <div class="card-meta">
+        <span>2024</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 ---
 
-## 🧠 What is The 2nd Blog?
-
-A digital garden and knowledge base, serving as my personal second brain. It grows as I learn, think, and write.
-
-- **Topics are organized by folders:**
-  - [`2nd opinion`](./2nd%20opinion/) — My takes, reflections, and commentary
-  - [`Research`](./Research/) — Notes, summaries, and deep dives into various subjects
-
-- **Tags** help you find related posts and connect ideas. Look for tags at the bottom of each note.
-
-- **Multilingual:**
-  - Most content is in English, but some posts are also available in 中文（Chinese）.
-  - Use the language switcher (coming soon) or look for language tags in posts.
-
----
-
-## 🌱 How to Explore
-
-- Browse by topic using the sidebar or the links above
-- Use tags to jump between related ideas
-- Search for keywords or concepts
-
----
-
-欢迎来到 **The 2nd Blog** —— 我的数字第二大脑。这里是我记录、整理、分享想法与研究的空间，支持中英文内容。你可以通过主题、标签或搜索来探索知识网络。
-
----
-
-> _This site is always evolving. Check back for new notes and connections!_ 
+> _"Write to think. Publish to connect."_ 

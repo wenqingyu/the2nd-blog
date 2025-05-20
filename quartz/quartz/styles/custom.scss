@@ -1,3 +1,741 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Bravoure.nl-inspired design for The 2nd Blog
+
+:root {
+  // Theme Colors
+  --primary-color: #000000;
+  --bg-color: #FFFFFF;
+  --text-color: var(--primary-color);
+  --accent-color: var(--primary-color);
+  --secondary-color: #666666;
+  --border-color: #EEEEEE;
+  --card-bg: var(--bg-color);
+  --card-shadow: rgba(0, 0, 0, 0.05);
+  --hover-bg: #F6F6F6;
+  
+  // Image paths
+  --welcome-banner-image: url('/static/img/welcome.png');
+  --post-banner-image: url('/static/img/post.png');
+  
+  // Typography
+  --font-size-base: 1rem;
+  --font-size-h1: 3.5rem;
+  --font-size-h2: 2.5rem;
+  --font-size-h3: 1.75rem;
+  --font-size-small: 0.875rem;
+  --font-family-primary: "GT America", "Space Grotesk", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-family-secondary: "Snell Roundhand", "GT America Expanded", cursive;
+  --font-family-mono: "GT America Mono", "Space Mono", monospace;
+  
+  // Spacing & Layout
+  --content-width: 1200px;
+  --card-gap: 0.8rem;
+  --section-spacing: 2rem;
+  --paragraph-spacing: 0.8rem;
+  --letter-spacing: -0.02em;
+  --line-height: 1.4;
+  
+  // Animation
+  --transition-speed: 0.2s;
+  --scale-hover: 1.03;
+}
+
+// Dark mode colors
+:root[saved-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #FFFFFF;
+  --primary-color: #FFFFFF;
+  --secondary-color: #AAAAAA;
+  --border-color: #333333;
+  --card-bg: #1E1E1E;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --hover-bg: #2A2A2A;
+  
+  // Override Quartz variables for dark theme
+  --light: #121212;
+  --lightgray: #2A2A2A;
+  --gray: #666666;
+  --darkgray: #AAAAAA;
+  --dark: #FFFFFF;
+  --secondary: #FFFFFF;
+  --tertiary: #CCCCCC;
+  --highlight: rgba(255, 255, 255, 0.08);
+  --text-highlight: rgba(255, 255, 255, 0.2);
+  
+  // Additional dark mode overrides
+  input, textarea, select, button {
+    background-color: #252525;
+    color: var(--text-color);
+    border-color: var(--border-color);
+  }
+  
+  pre, code {
+    background-color: #252525 !important;
+  }
+  
+  blockquote {
+    background-color: #252525;
+  }
+  
+  .tag-link, .tags a {
+    background-color: #252525;
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--bg-color);
+    }
+  }
+  
+  .card {
+    border: 1px solid #333333;
+  }
+}
+
+// Base styles
+body {
+  font-family: var(--font-family-primary) !important;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Main content container
+.content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// Article spacing
+article {
+  margin-bottom: 1.5rem;
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  p {
+    margin-bottom: var(--paragraph-spacing);
+  }
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-primary) !important;
+  line-height: 1.1;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: var(--font-size-h1) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 2rem !important;
+}
+
+h2 {
+  font-size: var(--font-size-h2) !important;
+  font-weight: 700 !important;
+  margin-top: 3rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+h3 {
+  font-size: var(--font-size-h3) !important;
+  font-weight: 600 !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+p {
+  margin-bottom: var(--paragraph-spacing) !important;
+  font-weight: 400;
+}
+
+// Links
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+  
+  &:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
+}
+
+// Code blocks
+pre, code {
+  font-family: var(--font-family-mono) !important;
+  border-radius: 0 !important;
+}
+
+pre {
+  padding: 1.5rem !important;
+  background-color: var(--hover-bg) !important;
+  border: none !important;
+  overflow-x: auto !important;
+}
+
+// Blockquote styling
+blockquote {
+  border-left: 3px solid var(--text-color) !important;
+  padding: 1.5rem !important;
+  margin: 2.5rem 0 !important;
+  font-style: italic !important;
+  background-color: var(--hover-bg);
+}
+
+// Images
+img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: 3rem 0;
+}
+
+// Meta information (dates, tags)
+.meta, .date, .tags, figcaption {
+  font-size: var(--font-size-small) !important;
+  color: var(--secondary-color) !important;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// Tags
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  
+  a {
+    padding: 0.3rem 0.7rem;
+    background-color: var(--hover-bg);
+    border-radius: 0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all var(--transition-speed) ease;
+    
+    &:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      text-decoration: none;
+    }
+  }
+}
+
+// Horizontal tag list
+ul.tags {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  
+  li {
+    margin: 0;
+  }
+}
+
+// Styling for category page tags
+div > h2 + ul.tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  padding-left: 0;
+  
+  li {
+    list-style: none;
+    margin: 0;
+  }
+}
+
+// Welcome Banner - Disabled
+.welcome-banner {
+  display: none; /* Hide the welcome banner */
+}
+
+// Original Welcome Banner Code (commented out)
+/*
+.welcome-banner {
+  width: 100%;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  min-height: 400px;
+  background-image: var(--welcome-banner-image);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  
+  .welcome-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 2rem;
+    max-width: 800px;
+    
+    h1 {
+      font-size: 4rem !important;
+      margin-bottom: 1rem !important;
+      font-weight: 800 !important;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+    }
+    
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 0 !important;
+      font-weight: 400;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    min-height: 300px;
+    
+    .welcome-content {
+      h1 {
+        font-size: 2.5rem !important;
+      }
+      
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+*/
+
+// Banner Image for Posts - Disabled
+.banner-image-container {
+  display: none; /* Hide post banners */
+}
+
+// Original Banner Image for Posts (commented out but keeping for reference)
+/*
+.banner-image-container {
+  width: 100%;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  max-height: 400px;
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    aspect-ratio: 21/9;
+    transition: transform var(--transition-speed) ease;
+    
+    &:hover {
+      transform: scale(var(--scale-hover));
+    }
+  }
+}
+*/
+
+// Card layout (for homepage) - Bravoure style
+.cards-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--card-gap);
+  margin: var(--section-spacing) 0;
+  
+  .card {
+    grid-column: span 6;
+    background-color: var(--hover-bg);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-speed) ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    @media (max-width: 1024px) {
+      grid-column: span 6;
+    }
+    
+    @media (max-width: 768px) {
+      grid-column: span 12;
+    }
+    
+    &:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-5px);
+      border-color: var(--primary-color);
+      
+      .card-title a, 
+      .card-excerpt,
+      .card-meta span,
+      .tags a {
+        color: var(--bg-color);
+      }
+      
+      .tags a {
+        background-color: rgba(255, 255, 255, 0.2);
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+    
+    .card-content {
+      padding: 1.2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      
+      a {
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .card-excerpt {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--secondary-color);
+      font-size: var(--font-size-small);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+// Explorer styles (sidebar)
+.explorer {
+  margin-top: 1rem;
+  
+  button.desktop-explorer {
+    display: none !important; // Hide the Explorer title
+  }
+  
+  .explorer-content {
+    margin-top: 0 !important;
+    
+    & > ul > li {
+      display: inline-block;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      
+      & > .folder-container {
+        background-color: var(--hover-bg);
+        padding: 0.5rem 1rem;
+        border-radius: 0;
+        transition: all var(--transition-speed) ease;
+        
+        &:hover {
+          background-color: var(--primary-color);
+          
+          .folder-title, svg {
+            color: var(--bg-color) !important;
+          }
+        }
+        
+        svg {
+          display: none; // Hide the folder icon
+        }
+        
+        .folder-title {
+          font-family: var(--font-family-primary);
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          font-weight: 500;
+        }
+      }
+      
+      .folder-outer > ul > li {
+        margin-bottom: 0.5rem;
+        
+        a {
+          font-size: 0.9rem;
+          font-weight: 400;
+          padding: 0.3rem 0;
+          display: block;
+          
+          &:hover {
+            color: var(--primary-color);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Table of contents
+.toc {
+  border-left: 1px solid var(--border-color);
+  padding-left: 1rem;
+  font-size: 0.875rem;
+  
+  a {
+    color: var(--secondary-color);
+    transition: all var(--transition-speed) ease;
+    
+    &:hover {
+      color: var(--text-color);
+      transform: translateX(2px);
+    }
+  }
+}
+
+// Graph view
+.graph {
+  margin-top: 2rem;
+  
+  .graph-title {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+}
+
+// Search component
+.search {
+  input {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    width: 100%;
+    border-radius: 0;
+    font-size: 1rem;
+    font-family: inherit;
+    
+    &:focus {
+      outline: none;
+      border-color: var(--text-color);
+    }
+  }
+}
+
+// Navigation elements
+nav {
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    
+    li {
+      a {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all var(--transition-speed) ease;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Footer styles
+footer {
+  margin-top: 5rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--border-color);
+  
+  p {
+    color: var(--secondary-color);
+  }
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+  :root {
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --section-spacing: 4rem;
+  }
+  
+  .cards-layout {
+    grid-template-columns: 1fr;
+    
+    .card {
+      grid-column: span 1;
+    }
+  }
+}
+
+// Bravoure-specific hover effect
+.hover-underline {
+  position: relative;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--text-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+// Dark mode specific overrides
+:root[saved-theme="dark"] {
+  input[type="search"] {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+  }
+  
+  .search-button svg {
+    color: var(--text-color);
+  }
+  
+  .search-result {
+    background-color: var(--card-bg);
+    
+    &:hover {
+      background-color: var(--hover-bg);
+    }
+  }
+  
+  .cards-layout .card:hover {
+    background-color: var(--hover-bg);
+  }
+  
+  .darkmode svg {
+    fill: var(--text-color);
+  }
+  
+  .sidebar {
+    background-color: var(--bg-color);
+    
+    &.right {
+      border-left: 1px solid var(--border-color);
+    }
+    
+    &.left {
+      border-right: 1px solid var(--border-color);
+    }
+  }
+}
+
+// Card layout for post previews
+.card-preview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+  
+  .preview-card {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    &:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary-color);
+    }
+    
+    .preview-content {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .preview-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      
+      a {
+        text-decoration: none;
+        color: var(--text-color);
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .preview-excerpt {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    
+    .preview-meta {
+      font-size: var(--font-size-small);
+      color: var(--secondary-color);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+// Hide 'Tags' heading on tag pages
+.popover-hint h1 + h1:contains("Tags") {
+  display: none;
+}
