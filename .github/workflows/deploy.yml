@@ -25,6 +25,8 @@ jobs:
         run: |
           cd quartz
           npx quartz build --directory="../vault/public"
+      - name: Add .nojekyll
+        run: touch quartz/public/.nojekyll
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
