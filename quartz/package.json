@@ -17,7 +17,9 @@
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx --test",
-    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"
+    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
+    "build:vault": "quartz build --directory=../vault",
+    "serve:vault": "quartz serve --directory=../vault"
   },
   "engines": {
     "npm": ">=9.3.1",
