@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>Quartz 4</title>
+      <title>The 2nd Blog</title>
       <link>https://quartz.jzhao.xyz</link>
-      <description>Last 10 notes on Quartz 4</description>
+      <description>Last 10 notes on The 2nd Blog</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>2nd Opinion</title>
     <link>https://quartz.jzhao.xyz/2nd-opinion/</link>
     <guid>https://quartz.jzhao.xyz/2nd-opinion/</guid>
-    <description>2nd Opinion This section contains my personal takes, reflections, and commentary on various topics.</description>
-    <pubDate>Tue, 20 May 2025 08:07:46 GMT</pubDate>
+    <description>2nd Opinion 第二观点 This section contains my personal takes, reflections, and commentary on various topics.</description>
+    <pubDate>Tue, 20 May 2025 14:49:45 GMT</pubDate>
   </item><item>
     <title>Research</title>
     <link>https://quartz.jzhao.xyz/Research/</link>
     <guid>https://quartz.jzhao.xyz/Research/</guid>
-    <description>Research This section gathers my research notes, summaries, and deep dives into various subjects.</description>
-    <pubDate>Tue, 20 May 2025 08:07:46 GMT</pubDate>
+    <description>Research 研究 This section gathers my research notes, summaries, and deep dives into various subjects.</description>
+    <pubDate>Tue, 20 May 2025 14:49:45 GMT</pubDate>
+  </item><item>
+    <title>红杉资本闭门会议：AI市场发展关键洞察</title>
+    <link>https://quartz.jzhao.xyz/Research/sequoia-ai-meetup-cn</link>
+    <guid>https://quartz.jzhao.xyz/Research/sequoia-ai-meetup-cn</guid>
+    <description>红杉资本闭门AI会议关键洞察 对红杉资本最新闭门讨论会关于AI市场发展的趋势和战略意义的深度分析。 执行摘要 红杉资本近期举办了一场高规格、仅限邀请的峰会”AI Ascent”，汇聚了约150位人工智能领域的顶尖人物，包括行业巨头如Sam Altman（OpenAI）和Jensen Huang（英伟达）。本研究笔记综合了此次会议的关键洞见，并分析了它们对AI生态系统和市场参与者的影响。 核心市场观察 1.</description>
+    <pubDate>Tue, 20 May 2025 14:49:45 GMT</pubDate>
+  </item><item>
+    <title>Key Takeaways from Sequoia&#039;s AI Closed-Door Meeting</title>
+    <link>https://quartz.jzhao.xyz/Research/sequoia-ai-meetup-en</link>
+    <guid>https://quartz.jzhao.xyz/Research/sequoia-ai-meetup-en</guid>
+    <description>Key Takeaways from Sequoia’s AI Closed-Door Meeting An analysis of emerging trends and strategic implications from Sequoia Capital’s latest closed-door discussions about AI market development.</description>
+    <pubDate>Tue, 20 May 2025 14:49:45 GMT</pubDate>
   </item><item>
     <title>The 2nd Blog</title>
     <link>https://quartz.jzhao.xyz/</link>
     <guid>https://quartz.jzhao.xyz/</guid>
-    <description>The 2nd Blog Welcome to The 2nd Blog — my digital second brain.</description>
-    <pubDate>Tue, 20 May 2025 08:07:46 GMT</pubDate>
+    <description>A place for thoughts, research and explorations RESEARCH 中文 Research &amp; Notes Structured knowledge, references, and ongoing investigations.</description>
+    <pubDate>Tue, 20 May 2025 14:49:45 GMT</pubDate>
   </item>
     </channel>
   </rss>
