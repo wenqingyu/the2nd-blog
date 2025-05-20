@@ -6,11 +6,23 @@
       <description>Last 10 notes on Quartz 4</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>My Digital Garden</title>
+    <title>2nd Opinion</title>
+    <link>https://quartz.jzhao.xyz/2nd-opinion/</link>
+    <guid>https://quartz.jzhao.xyz/2nd-opinion/</guid>
+    <description>2nd Opinion This section contains my personal takes, reflections, and commentary on various topics.</description>
+    <pubDate>Tue, 20 May 2025 08:07:46 GMT</pubDate>
+  </item><item>
+    <title>Research</title>
+    <link>https://quartz.jzhao.xyz/Research/</link>
+    <guid>https://quartz.jzhao.xyz/Research/</guid>
+    <description>Research This section gathers my research notes, summaries, and deep dives into various subjects.</description>
+    <pubDate>Tue, 20 May 2025 08:07:46 GMT</pubDate>
+  </item><item>
+    <title>The 2nd Blog</title>
     <link>https://quartz.jzhao.xyz/</link>
     <guid>https://quartz.jzhao.xyz/</guid>
-    <description>Welcome to My Digital Garden This is a test page for my Quartz-powered digital garden. Here I’ll share my thoughts, notes, and ideas.</description>
-    <pubDate>Tue, 20 May 2025 07:28:51 GMT</pubDate>
+    <description>The 2nd Blog Welcome to The 2nd Blog — my digital second brain.</description>
+    <pubDate>Tue, 20 May 2025 08:07:46 GMT</pubDate>
   </item>
     </channel>
   </rss>
