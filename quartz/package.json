@@ -19,6 +19,7 @@
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "build:vault": "quartz build --directory=../vault",
+    "build:vault:lowercase": "npm run build:vault && echo 'Note: macOS filesystem is case-insensitive; both research and Research URLs should work'",
     "serve:vault": "quartz serve --directory=../vault"
   },
   "engines": {
