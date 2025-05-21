@@ -739,3 +739,80 @@ footer {
 .popover-hint h1 + h1:contains("Tags") {
   display: none;
 }
+
+// Add more mobile-friendly styles
+@media all and (max-width: 800px) {
+  #quartz-body {
+    padding-top: 70px !important; // Increased to accommodate fixed header
+  }
+
+  .article {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .page-content {
+    margin-top: 1rem;
+  }
+
+  // Make sure the right sidebar doesn't push content down on mobile
+  .sidebar.right {
+    padding-top: 1rem !important;
+  }
+
+  // Improve article layout on mobile
+  .article-title, h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .author-info {
+    margin-top: 0.25rem !important;
+  }
+
+  // Fix spacing for the header
+  .page-header {
+    margin-top: 0 !important;
+  }
+  
+  // Hide any secondary search components on mobile
+  .mobile-only .search {
+    display: none !important;
+  }
+  
+  // Ensure darkmode toggle is properly positioned
+  .darkmode {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1001;
+  }
+  
+  // Remove default margin on mobile
+  body, html {
+    margin: 0 !important;
+  }
+  
+  // Ensure no elements overlap our mobile header
+  .mobile-header {
+    z-index: 1002 !important;
+  }
+  
+  // Fix any potential issues with click targets 
+  .mobile-sidebar-toggle * {
+    pointer-events: none;
+  }
+}
+
+// Add smooth transition to content when sidebar opens/closes
+body {
+  transition: padding-left 0.3s ease;
+}
+
+body.sidebar-open {
+  @media all and (max-width: 800px) {
+    padding-left: 0;
+  }
+}

@@ -5,13 +5,15 @@ import BilingualTitle from "./components/BilingualTitle"
 import BilingualArticleTitle from "./components/BilingualArticleTitle"
 import BilingualExplorer from "./components/BilingualExplorer"
 import CustomTagList from "./components/CustomTagList"
+import AuthorInfo from "./components/AuthorInfo"
+import MobileSidebar from "./components/MobileSidebar"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
     Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
+    Component.DesktopOnly(Component.Search()),
     Component.Darkmode(),
   ],
   footer: CustomFooter({
@@ -27,18 +29,24 @@ export const sharedPageComponents: SharedLayout = {
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     BilingualArticleTitle(),
+    AuthorInfo(),
     Component.ContentMeta(),
     CustomTagList()
   ],
   left: [
-    BilingualTitle({
-      englishTitle: "The 2nd Blog",
-      chineseTitle: "第二博客",
-      isSiteTitle: true
-    }),
-    BilingualExplorer(),
+    Component.DesktopOnly(
+      BilingualTitle({
+        englishTitle: "The 2nd Blog",
+        chineseTitle: "第二博客",
+        isSiteTitle: true
+      })
+    ),
+    Component.DesktopOnly(BilingualExplorer()),
+    Component.MobileOnly(
+      MobileSidebar()
+    ),
     Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
+    Component.DesktopOnly(Component.Search()),
     Component.Darkmode(),
   ],
   right: [
@@ -52,14 +60,19 @@ export const defaultContentPageLayout: PageLayout = {
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [],
   left: [
-    BilingualTitle({
-      englishTitle: "The 2nd Blog",
-      chineseTitle: "第二博客",
-      isSiteTitle: true
-    }),
-    BilingualExplorer(),
+    Component.DesktopOnly(
+      BilingualTitle({
+        englishTitle: "The 2nd Blog",
+        chineseTitle: "第二博客",
+        isSiteTitle: true
+      })
+    ),
+    Component.DesktopOnly(BilingualExplorer()),
+    Component.MobileOnly(
+      MobileSidebar()
+    ),
     Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
+    Component.DesktopOnly(Component.Search()),
     Component.Darkmode(),
   ],
   right: [],
