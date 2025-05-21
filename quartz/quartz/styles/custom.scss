@@ -39,55 +39,32 @@
   // Animation
   --transition-speed: 0.2s;
   --scale-hover: 1.03;
+
+  // Force light theme only
+  --light: #FFFFFF;
+  --lightgray: #F6F6F6;
+  --gray: #666666;
+  --darkgray: #333333;
+  --dark: #121212;
+  --secondary: #000000;
+  --tertiary: #666666;
+  --highlight: rgba(0, 0, 0, 0.05);
+  --text-highlight: rgba(0, 0, 0, 0.1);
 }
 
-// Dark mode colors
-:root[saved-theme="dark"] {
-  --bg-color: #121212;
-  --text-color: #FFFFFF;
-  --primary-color: #FFFFFF;
-  --secondary-color: #AAAAAA;
-  --border-color: #333333;
-  --card-bg: #1E1E1E;
-  --card-shadow: rgba(0, 0, 0, 0.3);
-  --hover-bg: #2A2A2A;
-  
-  // Override Quartz variables for dark theme
-  --light: #121212;
-  --lightgray: #2A2A2A;
-  --gray: #666666;
-  --darkgray: #AAAAAA;
-  --dark: #FFFFFF;
-  --secondary: #FFFFFF;
-  --tertiary: #CCCCCC;
-  --highlight: rgba(255, 255, 255, 0.08);
-  --text-highlight: rgba(255, 255, 255, 0.2);
-  
-  // Additional dark mode overrides
-  input, textarea, select, button {
-    background-color: #252525;
-    color: var(--text-color);
-    border-color: var(--border-color);
-  }
-  
-  pre, code {
-    background-color: #252525 !important;
-  }
-  
-  blockquote {
-    background-color: #252525;
-  }
-  
-  .tag-link, .tags a {
-    background-color: #252525;
-    &:hover {
-      background-color: var(--primary-color);
-      color: var(--bg-color);
-    }
-  }
-  
-  .card {
-    border: 1px solid #333333;
+// Remove all dark mode specific styles and media queries
+@media (prefers-color-scheme: dark) {
+  :root {
+    // Override dark mode with light mode colors
+    --light: #FFFFFF;
+    --lightgray: #F6F6F6;
+    --gray: #666666;
+    --darkgray: #333333;
+    --dark: #121212;
+    --secondary: #000000;
+    --tertiary: #666666;
+    --highlight: rgba(0, 0, 0, 0.05);
+    --text-highlight: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -633,47 +610,6 @@ footer {
   }
 }
 
-// Dark mode specific overrides
-:root[saved-theme="dark"] {
-  input[type="search"] {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-  }
-  
-  .search-button svg {
-    color: var(--text-color);
-  }
-  
-  .search-result {
-    background-color: var(--card-bg);
-    
-    &:hover {
-      background-color: var(--hover-bg);
-    }
-  }
-  
-  .cards-layout .card:hover {
-    background-color: var(--hover-bg);
-  }
-  
-  .darkmode svg {
-    fill: var(--text-color);
-  }
-  
-  .sidebar {
-    background-color: var(--bg-color);
-    
-    &.right {
-      border-left: 1px solid var(--border-color);
-    }
-    
-    &.left {
-      border-right: 1px solid var(--border-color);
-    }
-  }
-}
-
 // Card layout for post previews
 .card-preview {
   display: grid;
@@ -782,12 +718,9 @@ footer {
     display: none !important;
   }
   
-  // Ensure darkmode toggle is properly positioned
+  // Remove darkmode toggle from layout
   .darkmode {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 1001;
+    display: none !important;
   }
   
   // Remove default margin on mobile
@@ -815,4 +748,10 @@ body.sidebar-open {
   @media all and (max-width: 800px) {
     padding-left: 0;
   }
+}
+
+// Make sure no elements block the mobile menu in any way
+.mobile-sidebar-toggle {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
