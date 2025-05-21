@@ -25,13 +25,72 @@ jobs:
         run: |
           cd quartz
           npx quartz build --directory="../vault/public"
+      - name: Debug - List directory structure
+        run: |
+          echo "Listing directory structure to understand paths:"
+          find quartz/public -type d | sort
       - name: Create lowercase folders for case-insensitive URLs
         run: |
           # Create lowercase versions of folders to support case-insensitive URLs
-          mkdir -p quartz/public/public/research
-          cp -r quartz/public/public/Research/* quartz/public/public/research/ || true
-          mkdir -p quartz/public/public/2nd-opinion
-          cp -r quartz/public/public/2nd-Opinion/* quartz/public/public/2nd-opinion/ || true
+          # Find all directories with capitalized names and create lowercase equivalents
+          echo "Creating lowercase versions of all folders..."
+          
+          # First handle Research folder
+          echo "Processing Research folder"
+          if [ -d "quartz/public/public/Research" ]; then
+            mkdir -p quartz/public/public/research
+            cp -rf quartz/public/public/Research/* quartz/public/public/research/ 2>/dev/null || true
+            echo "Created lowercase version of Research folder"
+          else
+            echo "Research folder not found at expected location"
+            # Try alternative locations
+            find quartz/public -name "Research" -type d | while read dir; do
+              echo "Found Research at: $dir"
+              lowercase_dir=$(echo "$dir" | sed 's/Research/research/')
+              mkdir -p "$lowercase_dir"
+              cp -rf "$dir"/* "$lowercase_dir"/ 2>/dev/null || true
+              echo "Created lowercase version at: $lowercase_dir"
+            done
+          fi
+          
+          # Then handle 2nd-Opinion folder
+          echo "Processing 2nd-Opinion folder"
+          if [ -d "quartz/public/public/2nd-Opinion" ]; then
+            mkdir -p quartz/public/public/2nd-opinion
+            cp -rf quartz/public/public/2nd-Opinion/* quartz/public/public/2nd-opinion/ 2>/dev/null || true
+            echo "Created lowercase version of 2nd-Opinion folder"
+          else
+            echo "2nd-Opinion folder not found at expected location"
+            # Try alternative locations
+            find quartz/public -name "2nd-Opinion" -type d | while read dir; do
+              echo "Found 2nd-Opinion at: $dir"
+              lowercase_dir=$(echo "$dir" | sed 's/2nd-Opinion/2nd-opinion/')
+              mkdir -p "$lowercase_dir"
+              cp -rf "$dir"/* "$lowercase_dir"/ 2>/dev/null || true
+              echo "Created lowercase version at: $lowercase_dir"
+            done
+          fi
+          
+          # Add symbolic links as well (for more robust linking)
+          find quartz/public -name "Research" -type d | while read dir; do
+            lowercase_dir=$(echo "$dir" | sed 's/Research/research/')
+            if [ ! -d "$lowercase_dir" ]; then
+              ln -sf "$dir" "$lowercase_dir"
+              echo "Created symbolic link from $dir to $lowercase_dir"
+            fi
+          done
+          
+          find quartz/public -name "2nd-Opinion" -type d | while read dir; do
+            lowercase_dir=$(echo "$dir" | sed 's/2nd-Opinion/2nd-opinion/')
+            if [ ! -d "$lowercase_dir" ]; then
+              ln -sf "$dir" "$lowercase_dir"
+              echo "Created symbolic link from $dir to $lowercase_dir"
+            fi
+          done
+          
+          # Final verification
+          echo "Verifying lowercase folders:"
+          find quartz/public -type d -name "*[a-z]*" | sort
       - name: Add .nojekyll
         run: touch quartz/public/.nojekyll
       - name: Deploy to GitHub Pages
