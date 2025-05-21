@@ -68,10 +68,10 @@ const MobileSidebar: QuartzComponent = ({ displayClass }: QuartzComponentProps) 
         >
           <img src="/static/sidebar.png" alt="Menu" class="sidebar-icon" />
         </button>
-        <div class="mobile-site-title">
+        <a href="/" class="mobile-site-title">
           <span class="english-title">The 2nd Blog</span>
           <span class="chinese-title">第二博客</span>
-        </div>
+        </a>
       </div>
       
       {/* Sidebar content */}
@@ -108,6 +108,7 @@ MobileSidebar.css = `
   text-decoration: none;
   margin-left: 1rem;
   line-height: 1.2;
+  color: inherit;
 }
 
 .mobile-site-title .english-title {

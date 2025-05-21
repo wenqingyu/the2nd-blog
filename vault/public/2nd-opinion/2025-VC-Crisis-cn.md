@@ -2,7 +2,7 @@
 title: "2025风险投资的终局：当AI成为最后赌注"
 chineseTitle: "泡沫破灭中的VC生存指南"
 publish: true
-tags: [venture-capital, AI-bubble, economic-analysis, cn]
+tags: [venture-capital, AI-bubble, economic-analysis, 中文]
 author: Thomas Yu
 author_link: https://x.com/wenqingyu
 ---

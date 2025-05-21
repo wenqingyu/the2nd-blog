@@ -2,7 +2,7 @@
 title: "The End Game of Venture Capital in 2025: When AI Becomes the Last Bet"
 chineseTitle: "泡沫破灭中的VC生存指南"
 publish: true
-tags: [venture-capital, AI-bubble, economic-analysis, en]
+tags: [venture-capital, AI-bubble, economic-analysis, english]
 author: Thomas Yu
 author_link: https://x.com/wenqingyu
 ---
