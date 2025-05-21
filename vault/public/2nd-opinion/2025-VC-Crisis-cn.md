@@ -6,7 +6,7 @@ tags: [venture-capital, AI-bubble, economic-analysis, 中文]
 author: Thomas Yu
 author_link: https://x.com/wenqingyu
 ---
-![[Pasted image 20250521141617.png]]
+
 ## 2025风险投资的终局：当AI成为最后赌注
 
 _本分析扩展了David Gerard在 [In 2025, venture capital can't pretend everything is fine any more](https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/) 发表的批判性报告，整合了半导体产业数据、美联储利率决策记录及AI算力市场报告。_

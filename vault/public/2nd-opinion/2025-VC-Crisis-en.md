@@ -6,7 +6,7 @@ tags: [venture-capital, AI-bubble, economic-analysis, english]
 author: Thomas Yu
 author_link: https://x.com/wenqingyu
 ---
-![[Pasted image 20250521141625.png]]
+
 ## The End Game of Venture Capital in 2025: When AI Becomes the Last Bet
 
 _This analysis expands on the critical report published by David Gerard at [In 2025, venture capital can't pretend everything is fine any more](https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/), integrating semiconductor industry data, Federal Reserve rate decision records, and AI computing market reports._

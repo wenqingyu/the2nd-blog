@@ -5,8 +5,11 @@ publish: true
 author: Thomas Yu
 author_link: https://x.com/wenqingyu
 ---
+> _察劳问忧，自求口实，是以观颐；_
+> _厚积薄发，利涉大川，可得大蓄。_
+> 
+> _A place to observe, to think, to flourish._
 
-<p>A place for thoughts, research and explorations</p>
 
 <div class="cards-layout">
   <div class="card">
@@ -38,22 +41,6 @@ author_link: https://x.com/wenqingyu
   </div>
 </div>
 
-## SELECTED NOTES
-
-<div class="cards-layout">
-  <div class="card">
-    <div class="card-content">
-      <div class="tags">
-        <a href="/tags/featured">FEATURED</a>
-      </div>
-      <h2 class="card-title"><a href="#" class="hover-underline">Coming Soon</a></h2>
-      <p class="card-excerpt">More content will be added here as the digital garden grows.</p>
-      <div class="card-meta">
-        <span>2024</span>
-      </div>
-    </div>
-  </div>
-</div>
 
 ---
 
