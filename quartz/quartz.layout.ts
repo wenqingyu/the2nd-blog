@@ -7,6 +7,7 @@ import BilingualExplorer from "./components/BilingualExplorer"
 import CustomTagList from "./components/CustomTagList"
 import AuthorInfo from "./components/AuthorInfo"
 import MobileSidebar from "./components/MobileSidebar"
+import GoogleAnalytics from "./components/GoogleAnalytics"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -21,7 +22,7 @@ export const sharedPageComponents: SharedLayout = {
       About: "#",
     },
   }),
-  afterBody: [],
+  afterBody: [GoogleAnalytics()],
 }
 
 // components for pages that display a single page (e.g. a single note)
