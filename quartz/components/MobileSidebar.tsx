@@ -1,31 +1,69 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "../quartz/components/types"
 import { classNames } from "../quartz/util/lang"
-import { useState } from "preact/hooks"
+import { useEffect } from "preact/hooks"
 import BilingualExplorer from "./BilingualExplorer"
 
+// Add type for passive event listeners
+interface PassiveEventListenerOptions extends EventListenerOptions {
+  passive: boolean;
+}
+
 const MobileSidebar: QuartzComponent = ({ displayClass }: QuartzComponentProps) => {
-  const [isOpen, setIsOpen] = useState(false)
-  
-  // Simple toggle function
-  const handleToggle = () => {
-    const newIsOpen = !isOpen
-    setIsOpen(newIsOpen)
+  // Use a simpler approach with no React state
+  useEffect(() => {
+    // Get DOM elements
+    const toggleButton = document.querySelector('.mobile-sidebar-toggle') as HTMLElement
+    const sidebar = document.querySelector('.mobile-sidebar') as HTMLElement
+    const body = document.body
     
-    // Toggle body class to prevent scrolling when sidebar is open
-    if (newIsOpen) {
-      document.body.classList.add('sidebar-open')
-    } else {
-      document.body.classList.remove('sidebar-open')
+    // Initialize backdrop
+    const backdrop = document.createElement('div')
+    backdrop.className = 'mobile-sidebar-backdrop'
+    backdrop.setAttribute('aria-label', 'Close sidebar')
+    document.querySelector('.mobile-sidebar-container')?.appendChild(backdrop)
+    
+    // Hide backdrop initially
+    backdrop.style.display = 'none'
+    
+    // Toggle sidebar function
+    const toggleSidebar = () => {
+      const isOpen = sidebar.classList.contains('open')
+      
+      if (isOpen) {
+        // Close sidebar
+        sidebar.classList.remove('open')
+        backdrop.style.display = 'none'
+        body.classList.remove('sidebar-open')
+      } else {
+        // Open sidebar
+        sidebar.classList.add('open')
+        backdrop.style.display = 'block'
+        body.classList.add('sidebar-open')
+      }
     }
-  }
+    
+    // Attach event listeners
+    toggleButton?.addEventListener('click', toggleSidebar)
+    toggleButton?.addEventListener('touchstart', toggleSidebar, { passive: true } as PassiveEventListenerOptions)
+    backdrop.addEventListener('click', toggleSidebar)
+    backdrop.addEventListener('touchstart', toggleSidebar, { passive: true } as PassiveEventListenerOptions)
+    
+    // Cleanup
+    return () => {
+      toggleButton?.removeEventListener('click', toggleSidebar)
+      toggleButton?.removeEventListener('touchstart', toggleSidebar, { passive: true } as PassiveEventListenerOptions)
+      backdrop.removeEventListener('click', toggleSidebar)
+      backdrop.removeEventListener('touchstart', toggleSidebar, { passive: true } as PassiveEventListenerOptions)
+      backdrop.remove()
+    }
+  }, []) // Empty dependency array to run once
   
   return (
     <div class={classNames(displayClass, "mobile-sidebar-container")}>
       <div class="mobile-header">
         <button 
           class="mobile-sidebar-toggle" 
-          onClick={handleToggle}
-          aria-label={isOpen ? "Close sidebar" : "Open sidebar"}
+          aria-label="Toggle sidebar"
           type="button"
         >
           <img src="/static/sidebar.png" alt="Menu" class="sidebar-icon" />
@@ -35,15 +73,11 @@ const MobileSidebar: QuartzComponent = ({ displayClass }: QuartzComponentProps) 
           <span class="chinese-title">第二博客</span>
         </div>
       </div>
-      <div class={isOpen ? "mobile-sidebar open" : "mobile-sidebar"}>
+      
+      {/* Sidebar content */}
+      <div class="mobile-sidebar">
         <BilingualExplorer />
       </div>
-      {isOpen && (
-        <div 
-          class="mobile-sidebar-backdrop" 
-          onClick={handleToggle}
-        ></div>
-      )}
     </div>
   )
 }
@@ -101,6 +135,11 @@ MobileSidebar.css = `
   border-radius: 4px;
   position: relative;
   z-index: 1002;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+  user-select: none;
 }
 
 .sidebar-icon {
@@ -115,10 +154,6 @@ MobileSidebar.css = `
 
 .mobile-sidebar-toggle:active {
   background: rgba(0,0,0,0.15);
-}
-
-.mobile-sidebar-backdrop {
-  display: none;
 }
 
 @media all and (max-width: 800px) {
@@ -143,14 +178,17 @@ MobileSidebar.css = `
   }
   
   .mobile-sidebar-backdrop {
-    display: block;
     position: fixed;
     top: 60px;
     left: 0;
     width: 100%;
     height: calc(100vh - 60px);
     background: rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     z-index: 998;
+    cursor: pointer;
+    touch-action: manipulation;
   }
   
   body.sidebar-open {
