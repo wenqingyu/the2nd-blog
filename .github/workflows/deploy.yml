@@ -25,6 +25,13 @@ jobs:
         run: |
           cd quartz
           npx quartz build --directory="../vault/public"
+      - name: Create lowercase folders for case-insensitive URLs
+        run: |
+          # Create lowercase versions of folders to support case-insensitive URLs
+          mkdir -p quartz/public/public/research
+          cp -r quartz/public/public/Research/* quartz/public/public/research/ || true
+          mkdir -p quartz/public/public/2nd-opinion
+          cp -r quartz/public/public/2nd-Opinion/* quartz/public/public/2nd-opinion/ || true
       - name: Add .nojekyll
         run: touch quartz/public/.nojekyll
       - name: Deploy to GitHub Pages
