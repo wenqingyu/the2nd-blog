@@ -385,17 +385,17 @@ div > h2 + ul.tags {
     }
     
     .card-content {
-      padding: 1.2rem;
+      padding: 0.8rem;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
     }
     
     .card-title {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
+      margin-top: 0.3rem;
+      margin-bottom: 0.5rem;
       
       a {
         text-decoration: none;
@@ -408,8 +408,9 @@ div > h2 + ul.tags {
     
     .card-excerpt {
       color: var(--secondary-color);
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.8rem;
       flex-grow: 1;
+      font-size: 0.9rem;
     }
     
     .card-meta {
@@ -679,7 +680,7 @@ footer {
 // Add more mobile-friendly styles
 @media all and (max-width: 800px) {
   #quartz-body {
-    padding-top: 70px !important; // Increased to accommodate fixed header
+    padding-top: 60px !important; // Keep this to accommodate the fixed header
   }
 
   .article {
@@ -732,18 +733,14 @@ footer {
   .mobile-header {
     z-index: 1002 !important;
   }
-  
-  // Fix any potential issues with click targets 
-  .mobile-sidebar-toggle * {
-    pointer-events: none;
+
+  // No need for explorer toggle on mobile since we have categories in header
+  button.explorer-toggle {
+    display: none !important;
   }
 }
 
-// Add smooth transition to content when sidebar opens/closes
-body {
-  transition: padding-left 0.3s ease;
-}
-
+// Remove sidebar related CSS since we don't need it anymore
 body.sidebar-open {
   @media all and (max-width: 800px) {
     padding-left: 0;
@@ -755,3 +752,4 @@ body.sidebar-open {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
+

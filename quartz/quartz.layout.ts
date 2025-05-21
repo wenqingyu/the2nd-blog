@@ -6,14 +6,14 @@ import BilingualArticleTitle from "./components/BilingualArticleTitle"
 import BilingualExplorer from "./components/BilingualExplorer"
 import CustomTagList from "./components/CustomTagList"
 import AuthorInfo from "./components/AuthorInfo"
-import MobileSidebar from "./components/MobileSidebar"
+import MobileHeader from "./components/MobileHeader"
 import GoogleAnalytics from "./components/GoogleAnalytics"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
-    Component.MobileOnly(Component.Spacer()),
+    Component.MobileOnly(MobileHeader()),
     Component.DesktopOnly(Component.Search()),
   ],
   footer: CustomFooter({
@@ -35,18 +35,28 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.DesktopOnly(
-      BilingualTitle({
-        englishTitle: "The 2nd Blog",
-        chineseTitle: "第二博客",
-        isSiteTitle: true
+      Component.Flex({
+        components: [
+          {
+            Component: BilingualTitle({
+              englishTitle: "The 2nd Blog",
+              chineseTitle: "第二博客",
+              isSiteTitle: true
+            }),
+          }
+        ],
+        direction: "column",
+        gap: "1rem"
       })
     ),
     Component.DesktopOnly(BilingualExplorer()),
-    Component.MobileOnly(
-      MobileSidebar()
-    ),
-    Component.MobileOnly(Component.Spacer()),
-    Component.DesktopOnly(Component.Search()),
+    Component.Flex({
+      components: [
+        { Component: Component.DesktopOnly(Component.Search()) }
+      ],
+      direction: "row",
+      gap: "0.5rem"
+    }),
   ],
   right: [
     Component.Graph(),
@@ -60,18 +70,28 @@ export const defaultListPageLayout: PageLayout = {
   beforeBody: [],
   left: [
     Component.DesktopOnly(
-      BilingualTitle({
-        englishTitle: "The 2nd Blog",
-        chineseTitle: "第二博客",
-        isSiteTitle: true
+      Component.Flex({
+        components: [
+          {
+            Component: BilingualTitle({
+              englishTitle: "The 2nd Blog",
+              chineseTitle: "第二博客",
+              isSiteTitle: true
+            }),
+          }
+        ],
+        direction: "column",
+        gap: "1rem"
       })
     ),
     Component.DesktopOnly(BilingualExplorer()),
-    Component.MobileOnly(
-      MobileSidebar()
-    ),
-    Component.MobileOnly(Component.Spacer()),
-    Component.DesktopOnly(Component.Search()),
+    Component.Flex({
+      components: [
+        { Component: Component.DesktopOnly(Component.Search()) }
+      ],
+      direction: "row",
+      gap: "0.5rem"
+    }),
   ],
   right: [],
 }
