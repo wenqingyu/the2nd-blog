@@ -9,8 +9,11 @@ const categoryTranslations: Record<string, string> = {
   "ABOUT": "关于"
 }
 
-// Define fixed categories that should always be shown
-const fixedCategories = ["research", "2nd-opinion"]
+// Define fixed categories that should always be shown with proper capitalization
+const fixedCategories = [
+  { slug: "research", displayName: "Research" },
+  { slug: "2nd-opinion", displayName: "2nd-Opinion" }
+]
 
 // Main component (renamed to MobileHeader since it's no longer a sidebar)
 const MobileHeader: QuartzComponent = ({ displayClass, fileData }: QuartzComponentProps) => {
@@ -27,12 +30,12 @@ const MobileHeader: QuartzComponent = ({ displayClass, fileData }: QuartzCompone
         <nav class="mobile-nav">
           <ul class="mobile-categories">
             {fixedCategories.map(folder => {
-              const folderDisplayName = folder.toUpperCase().replace('-', ' ')
-              const folderLink = resolveRelative(fileData.slug!, folder as FullSlug)
+              const folderDisplayName = folder.displayName.toUpperCase().replace('-', ' ')
+              const folderLink = resolveRelative(fileData.slug!, folder.displayName as FullSlug)
               const chineseName = categoryTranslations[folderDisplayName.replace(' ', '-')] || ""
               
               return (
-                <li class={folder === currentDir ? "active" : ""}>
+                <li class={folder.slug === currentDir ? "active" : ""}>
                   <a href={folderLink} class="category-link">
                     {folderDisplayName}
                   </a>
