@@ -10,8 +10,11 @@ const categoryTranslations: Record<string, string> = {
   "ABOUT": "关于"
 }
 
-// Define fixed categories that should always be shown
-const fixedCategories = ["research", "2nd-opinion"]
+// Define fixed categories that should always be shown with proper capitalization
+const fixedCategories = [
+  { slug: "research", displayName: "Research" },
+  { slug: "2nd-opinion", displayName: "2nd-Opinion" }
+]
 
 const BilingualExplorer: QuartzComponent = ({ displayClass, allFiles, fileData }: QuartzComponentProps) => {
   // Create a mapping of folders to files
@@ -19,7 +22,7 @@ const BilingualExplorer: QuartzComponent = ({ displayClass, allFiles, fileData }
   
   // Initialize with fixed categories
   fixedCategories.forEach(category => {
-    foldersByName[category] = []
+    foldersByName[category.slug] = []
   })
   
   // Add files to categories
@@ -43,12 +46,13 @@ const BilingualExplorer: QuartzComponent = ({ displayClass, allFiles, fileData }
     <div class={classNames(displayClass, "explorer")}>
       <ul class="folder-list">
         {fixedCategories.map(folder => {
-          const folderDisplayName = folder.toUpperCase().replace('-', ' ')
-          const folderLink = resolveRelative(fileData.slug!, folder as FullSlug)
+          const folderDisplayName = folder.displayName.toUpperCase().replace('-', ' ')
+          // Use the properly capitalized displayName for the link
+          const folderLink = resolveRelative(fileData.slug!, folder.displayName as FullSlug)
           const chineseName = categoryTranslations[folderDisplayName.replace(' ', '-')] || ""
           
           return (
-            <li class={folder === currentDir ? "active" : ""}>
+            <li class={folder.slug === currentDir ? "active" : ""}>
               <div class="folder-container">
                 <a href={folderLink} class="folder-title">
                   {folderDisplayName} <span class="chinese-category">{chineseName}</span>
