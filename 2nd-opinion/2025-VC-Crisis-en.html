@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>The End Game of Venture Capital in 2025: When AI Becomes the Last Bet</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space Grotesk:wght@400;700&amp;family=Space Grotesk:ital,wght@0,400;0,600;1,400;1,600&amp;family=Space Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="The 2nd Blog"/><meta property="og:title" content="The End Game of Venture Capital in 2025: When AI Becomes the Last Bet"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The End Game of Venture Capital in 2025: When AI Becomes the Last Bet"/><meta name="twitter:description" content="The End Game of Venture Capital in 2025: When AI Becomes the Last Bet This analysis expands on the critical report published by David Gerard at In 2025, venture capital can’t pretend everything is fine any more, integrating semiconductor industry data, Federal Reserve rate decision records, and AI c..."/><meta property="og:description" content="The End Game of Venture Capital in 2025: When AI Becomes the Last Bet This analysis expands on the critical report published by David Gerard at In 2025, venture capital can’t pretend everything is fine any more, integrating semiconductor industry data, Federal Reserve rate decision records, and AI c..."/><meta property="og:image:alt" content="The End Game of Venture Capital in 2025: When AI Becomes the Last Bet This analysis expands on the critical report published by David Gerard at In 2025, venture capital can’t pretend everything is fine any more, integrating semiconductor industry data, Federal Reserve rate decision records, and AI c..."/><meta property="twitter:domain" content="quartz.jzhao.xyz"/><meta property="og:url" content="https://quartz.jzhao.xyz/2nd-opinion/2025-VC-Crisis-en"/><meta property="twitter:url" content="https://quartz.jzhao.xyz/2nd-opinion/2025-VC-Crisis-en"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="The End Game of Venture Capital in 2025: When AI Becomes the Last Bet This analysis expands on the critical report published by David Gerard at In 2025, venture capital can’t pretend everything is fine any more, integrating semiconductor industry data, Federal Reserve rate decision records, and AI c..."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvdGhlMm5kLWJsb2cvdGhlMm5kLWJsb2cvcXVhcnR6L3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwYWRkaW5nOiAycmVtO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://quartz.jzhao.xyz/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://quartz.jzhao.xyz/2nd-opinion/2025-VC-Crisis-en-og-image.webp"/><meta property="og:image:url" content="https://quartz.jzhao.xyz/2nd-opinion/2025-VC-Crisis-en-og-image.webp"/><meta name="twitter:image" content="https://quartz.jzhao.xyz/2nd-opinion/2025-VC-Crisis-en-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="2nd-opinion/2025-VC-Crisis-en"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="site-title desktop-only"><a href="../" class="title-link">The 2nd Blog <span class="chinese-title">第二博客</span></a></h1><div class="explorer desktop-only"><ul class="folder-list"><li class><div class="folder-container"><a href="../research" class="folder-title">RESEARCH <span class="chinese-category">研究</span></a></div></li><li class="active"><div class="folder-container"><a href="../2nd-opinion" class="folder-title">2ND OPINION <span class="chinese-category">观点</span></a></div></li></ul></div><div class="mobile-sidebar-container mobile-only"><div class="mobile-header"><button class="mobile-sidebar-toggle" aria-label="Open sidebar" type="button"><div class="hamburger-menu"><span class="line1"></span><span class="line2"></span><span class="line3"></span></div></button><a href="/" class="mobile-site-title"><span class="english-title">The 2nd Blog</span><span class="chinese-title">第二博客</span></a></div><div class="mobile-sidebar"></div></div><div class="spacer mobile-only"></div><div class="search desktop-only"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div class="center"><div class="page-header"><header><div class="spacer mobile-only"></div><div class="search desktop-only"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></header><div class="popover-hint"><h1 class="article-title">The End Game of Venture Capital in 2025: When AI Becomes the Last Bet</h1><div class="author-info">By <a href="https://x.com/wenqingyu" target="_blank" rel="noopener noreferrer">Thomas Yu</a></div><p show-comma="true" class="content-meta"><time datetime="2025-05-21T02:41:36.000Z">May 21, 2025</time><span>12 min read</span></p><div class="tag-container"><a href="../tags/venture-capital" class="tag-link">#venture-capital</a><a href="../tags/AI-bubble" class="tag-link">#AI-bubble</a><a href="../tags/economic-analysis" class="tag-link">#economic-analysis</a><a href="../tags/en" class="tag-link">#en</a></div></div></div><article class="popover-hint"><h2 id="the-end-game-of-venture-capital-in-2025-when-ai-becomes-the-last-bet">The End Game of Venture Capital in 2025: When AI Becomes the Last Bet<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-end-game-of-venture-capital-in-2025-when-ai-becomes-the-last-bet" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><em>This analysis expands on the critical report published by David Gerard at <a href="https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/" class="external">In 2025, venture capital can’t pretend everything is fine any more<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, integrating semiconductor industry data, Federal Reserve rate decision records, and AI computing market reports.</em></p>
+<blockquote>
+<p>“Venture capital is screwed. A bubble in AI is their last hope, and they’re betting everything on Sam Altman. It’s heartwarming… Here is the state of venture capital in early 2025: Venture capital is moribund except AI. AI is moribund except OpenAI. OpenAI is a weird scam that wants to burn money so fast it summons AI God. Nobody can cash out.”</p>
+<p>— David Gerard, <a href="https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/" class="external">pivot-to-ai.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Personal Notes: Report Overview </p></div>
+                  
+                </div>
+<div class="callout-content">
+<div class="callout-content-inner">
+<p>As a founder of an AI startup, I see Gerard’s report revealing two key realities: VCs are going all-in on AI, while the AI industry is going all-in on OpenAI. This extreme concentration of investment creates a risk of distorted market signals. Despite occasional news of small startups securing funding and the market maintaining relative optimism and excitement, mainstream funding still predominantly favors high-stakes “high-altitude operations.” This raises several questions:</p>
+<ol>
+<li>Did we receive investment because of our technological advantages and commercialization path, or merely because of the “AI hype”?</li>
+<li>For early-stage entrepreneurs, are there paths and opportunities to enter the high-stakes game?</li>
+<li>For VCs focused on early-stage investments, do their strategy, investment logic, and exit plans also need significant transformation?</li>
+</ol>
+<p>Overall, the latter part of this article particularly discusses perspectives from VCs, with viewpoints worth studying.</p>
+</div>
+</div>
+</blockquote>
+<h2 id="core-arguments-deconstructed">Core Arguments Deconstructed<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#core-arguments-deconstructed" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-trump-tariffs-impact-on-tech-supply-chains">1. Trump Tariffs’ Impact on Tech Supply Chains<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-trump-tariffs-impact-on-tech-supply-chains" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p>“The Trump economic disaster is the most important material fact for the venture capital sphere. The report goes on and on about the tariffs… With uncertainty dominating US financial markets throughout the first quarter, our prior expectation that 2025 would see a resurgence in venture capital (VC) liquidity and dealmaking has been dimmed. Should the latest iteration of tariffs stand, we expect significant pressure on fundraising and dealmaking in the near term as investors sit on the sidelines and wait for signs of market stabilization.”</p>
+<p>— NVCA report, cited in Gerard’s analysis</p>
+</blockquote>
+<blockquote>
+<p>“Q1 ‘25 risk monitoring shows 83% of hardware startups have delayed production plans” —PitchBook-NVCA Report</p>
+</blockquote>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Personal Notes: Supply Chain and Computing Power Challenges </p></div>
+                  
+                </div>
+<div class="callout-content">
+<div class="callout-content-inner">
+<p>The impact of tariff policies on hardware startups has directly changed our technology roadmap. The high-performance GPUs we originally planned to purchase have increased in price by 40%, with delivery times extended from 3 months to 9 months. This has forced us to rethink our AI development strategy:</p>
+<ul>
+<li>First, many AI companies without chip advantages, such as Alibaba, ByteDance, and DeepSeek, are directing more resources toward model compression and inference optimization;</li>
+<li>Second, sharing computing resources with other startups has become a trend, not only through cloud service integration but potentially extending to more granular levels among independent developers and early-stage startups with smaller technical stack usage. This will lead to resource re-integration at smaller granularity;</li>
+<li>Of course, this trend will also accelerate cross-regional integration and procurement of upstream models and agents by terminal AI products to reduce the impact of regional hardware isolation on end users. These challenges also create opportunities for cross-regional scheduling and integration of models, data, and payments to improve user coverage and reach rates for similar products across different regions. Interesting tracks include aggregation and routing products like OpenRouter and Venice AI.</li>
+</ul>
+</div>
+</div>
+</blockquote>
+<h3 id="2-the-end-of-the-zero-interest-rate-era-and-capital-migration">2. The End of the Zero Interest Rate Era and Capital Migration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-the-end-of-the-zero-interest-rate-era-and-capital-migration" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p>“VC is hilariously unable to cope with not being in a zero-interest-rate environment… In 2008, the global financial crisis hit. Central banks use interest rates as the brakes on an economy, so they took the brakes off to make sure money kept flowing around. Interest rates went below 1%. And interest stayed near zero for over a decade… But then inflation came along, and the Fed put interest rates back up — and suddenly there was less money. Why put money into venture capital when you could get back 5% just buying Treasury bills?”</p>
+<p>— David Gerard, <a href="https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/" class="external">pivot-to-ai.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+<blockquote>
+<p>“10-year Treasury yield stable at 5.2%, highest since 2007” —Federal Reserve April 2025 Report</p>
+</blockquote>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Personal Notes: Financing Environment Restructuring </p></div>
+                  
+                </div>
+<div class="callout-content">
+<div class="callout-content-inner">
+<p>The high interest rate environment has completely changed our capital planning. When raising funds before 2023, investors hardly asked about profitability paths, focusing instead on user growth and technological breakthroughs. Now, every financing meeting has turned into a business model analysis and unit economics review. In response, we’ve shifted from “casting a wide net” growth to “self-sustaining” growth - building a business model where each customer reaches customer acquisition cost recovery within 6 months. At the same time, we’ve found that the high interest rate environment has filtered out more “rational capital,” these investors typically bringing more valuable industry resources and long-term partnership intentions. Interestingly, despite overall capital tightening, valuation multiples have remained relatively stable for AI companies that can demonstrate unit economics - suggesting the market is transitioning from “AI concept hype” to the “AI value realization” phase.</p>
+</div>
+</div>
+</blockquote>
+<h3 id="3-the-ecosystem-dilemma-under-openais-monopoly">3. The Ecosystem Dilemma Under OpenAI’s Monopoly<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-the-ecosystem-dilemma-under-openais-monopoly" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p>“This year, the investors are all-in on AI. Crypto’s still dead, quantum isn’t taking off — AI’s the last game in the casino… There’s lots of graphs in this report showing healthy dollar amounts. These are mostly the ‘<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9463em;vertical-align:-0.1944em;"></span><span class="mord">40</span><span class="mord mathnormal">bi</span><span class="mord mathnormal" style="margin-right:0.01968em;">ll</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathnormal">Op</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">ll</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span><span class="mord mathnormal">b</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.03148em;">bank</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">an</span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord mathnormal">h</span><span class="mord mathnormal">eo</span><span class="mord mathnormal">t</span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">t</span><span class="mord mathnormal">u</span><span class="mord mathnormal">p</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">s</span><span class="mord">.</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">m</span><span class="mord mathnormal">os</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span><span class="mord mathnormal">llt</span><span class="mord mathnormal">h</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">p</span><span class="mord mathnormal">h</span><span class="mord mathnormal">s</span><span class="mord mathnormal">an</span><span class="mord mathnormal">d</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">i</span><span class="mord mathnormal">cs</span><span class="mord mathnormal">in</span><span class="mord mathnormal">t</span><span class="mord mathnormal">hi</span><span class="mord mathnormal">sre</span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span><span class="mord mathnormal">re</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">i</span><span class="mord mathnormal">es</span><span class="mord mathnormal">ba</span><span class="mord mathnormal">se</span><span class="mord mathnormal">d</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord mathnormal">h</span><span class="mord mathnormal">eo</span><span class="mord mathnormal">n</span><span class="mord mathnormal">e</span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.03588em;">ug</span><span class="mord mathnormal">e</span><span class="mord mathnormal">Op</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">A</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal">o</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.01968em;">tl</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span><span class="mord">.</span><span class="mord mathnormal">A</span><span class="mord mathnormal">n</span><span class="mord mathnormal">d</span><span class="mord mathnormal">reesse</span><span class="mord mathnormal">n</span><span class="mord mathnormal">Horo</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.02778em;">sr</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">h</span><span class="mord mathnormal">t</span><span class="mord mathnormal">n</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">ai</span><span class="mord mathnormal">s</span><span class="mord mathnormal">in</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">res</span><span class="mord mathnormal">h</span></span></span></span>20 billion investment fund to try to keep the AI bubble going.”</p>
+<p>— David Gerard, <a href="https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/" class="external">pivot-to-ai.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>“Pitchbook says: ‘57.9% of global VC dollars invested in Q1 went to AI and machine learning startups.’ Most of that’s OpenAI. Even Pitchbook calls it ‘FOMO’ — fear of missing out.”</p>
+</blockquote>
+<blockquote>
+<p>“OpenAI consumes 38% of global AI computing power, exceeding the combined total of the 2nd to 5th ranked companies” —Synergy Research 2025</p>
+</blockquote>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Personal Notes: Differentiation Survival Strategy </p></div>
+                  
+                </div>
+<div class="callout-content">
+<div class="callout-content-inner">
+<p>OpenAI’s dominant position has forced us to redefine our company strategy. In 2023, we were still trying to build general large models; by mid-2024, this path had become unfeasible - unable to compete with oligopolies in capital and computing power. Our transformation strategy includes:</p>
+<ol>
+<li>Focusing on vertical domains, elevating medical image recognition accuracy above human expert levels;</li>
+<li>Developing specialized small models that achieve 90% of large model effectiveness at 1/100th the computational cost;</li>
+<li>Leveraging the API economy, building our products on foundation models but providing differentiated value.</li>
+</ol>
+<p>This “adaptive evolution” seems to be the only way out for independent AI companies. Notably, we’ve found the “middle ground” most dangerous - not small enough to focus on vertical domains, not large enough to compete with giants. For entrepreneurs, clearly understanding one’s position in the ecosystem is more critical than technological breakthroughs.</p>
+</div>
+</div>
+</blockquote>
+<h2 id="structural-opportunity-map">Structural Opportunity Map<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#structural-opportunity-map" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="new-approaches-in-failed-exit-mechanisms">New Approaches in Failed Exit Mechanisms<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#new-approaches-in-failed-exit-mechanisms" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p>“AI is the only thing that’s catching the eye of the investors. The investors don’t want to put their money into other areas because they’re just not getting payouts… Unfortunately, the stock market is broken — the Trump tariffs again — so IPOs are not popping on launch, so they’re not happening.”</p>
+<p>— David Gerard, <a href="https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/" class="external">pivot-to-ai.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>“CoreWeave, riding the AI buzz for all it was worth, was the big public exit in first quarter 2025, and that one fell flat because their numbers were objectively terrible and their business plan doesn’t work… But even with all that, CoreWeave on its own was 40% of all first quarter exits by value.”</p>
+</blockquote>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph TD\n    A[Traditional IPO Channels Closed] --> B[Secondary Market Fragmentation]\n    B --> C[Private Equity Acquisition Funds Rising]\n    C --> D[SPAC 2.0 Regulatory Arbitrage]\n    D --> E[AI Project Spin-off Listings]&quot;">graph TD
+    A[Traditional IPO Channels Closed] --> B[Secondary Market Fragmentation]
+    B --> C[Private Equity Acquisition Funds Rising]
+    C --> D[SPAC 2.0 Regulatory Arbitrage]
+    D --> E[AI Project Spin-off Listings]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Personal Notes: Exit Strategy Reconstruction </p></div>
+                  
+                </div>
+<div class="callout-content">
+<div class="callout-content-inner">
+<p>As an AI startup founded in 2022, we’re facing entirely new exit challenges. In the current environment, we’ve adjusted three key strategies:</p>
+<ol>
+<li>Establishing early technical collaboration with strategic buyers;</li>
+<li>Focusing on retention and cash flow rather than high valuations, with the goal of achieving positive cash flow within 12 months;</li>
+<li>Exploring partial exit mechanisms based on “profitable business units” rather than whole-company exits.</li>
+</ol>
+<p>What’s most surprising is that our most valuable assets have shifted from algorithms to domain-specific data and application integration experience - these are harder to replicate than the technology itself. For entrepreneurs, thinking about value capture rather than valuation growth may be the key mindset shift for the next three years.</p>
+</div>
+</div>
+</blockquote>
+<h2 id="scenario-planning">Scenario Planning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#scenario-planning" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="2026-scenario-prediction-matrix">2026 Scenario Prediction Matrix<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-scenario-prediction-matrix" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p>“The report’s theme for the future is: hope really hard! Maybe markets will recover and IPOs will pop again. Maybe Trump will come up with a coherent plan and stop being volatile and weird. Maybe! That’s it. That’s all the plan they have. These guys haven’t got a clue what to do next. They really don’t. This is the industry talking to itself and saying ‘well gosh, chaps, looks like we’re screwed.‘”</p>
+<p>— David Gerard, <a href="https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/" class="external">pivot-to-ai.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Driving Factor</th><th>Optimistic Scenario</th><th>Baseline Scenario</th><th>Pessimistic Scenario</th></tr></thead><tbody><tr><td>Interest Rate Policy</td><td>Fed cuts rates to 3%</td><td>Maintains 5.25%</td><td>Raises to 6.5%</td></tr><tr><td>Geopolitics</td><td>US-China Computing Agreement</td><td>Partial Tech Cold War</td><td>Complete Tech Decoupling</td></tr><tr><td>AI Breakthroughs</td><td>AGI Prototype Emerges</td><td>Specialized AI Continues to Improve</td><td>Major Safety Incident Occurs</td></tr><tr><td>Regulatory Environment</td><td>Global AI Governance Framework</td><td>Fragmented Regional Regulations</td><td>Complete Industry Overhaul</td></tr></tbody></table></div>
+<p><em>Data modeling based on MIT Technology Review’s Monte Carlo simulations (predictive analysis from a 2023 perspective)</em></p>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Personal Notes: Strategic Decision Reference </p></div>
+                  
+                </div>
+<div class="callout-content">
+<div class="callout-content-inner">
+<p>Our company is using this matrix as the foundation for quarterly strategic assessments. In practice, we’ve found that “single scenario” planning is almost always wrong, while preparing multi-path strategies is more practical. Based on this, we’ve developed three parallel strategies:</p>
+<ol>
+<li>In the baseline scenario, focus on a single geographic market and positive cash flow;</li>
+<li>For the AI field, the key to scenario planning isn’t predictive accuracy but response speed - a new technology or regulatory change can completely transform the market landscape within weeks.</li>
+<li>Seeking technological arbitrage opportunities between emerging AI markets (such as Asia outside China, Middle East, Europe outside France/Germany/UK, and Africa) and the frontier models, application products, and services from China and the US.</li>
+</ol>
+<p>In conclusion, the challenges facing VCs and startups ultimately require startup insights to solve.</p>
+</div>
+</div>
+</blockquote>
+<h2 id="contrasting-market-perspectives">Contrasting Market Perspectives<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#contrasting-market-perspectives" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>While Gerard’s analysis paints a grim picture of the venture capital landscape in 2025, other market observers present a more optimistic outlook. According to Joash Lee, a venture partner at Iron Key writing for Forbes:</p>
+<blockquote>
+<p>“2024 saw some early signs of recovery, with global VC investments rising by 5.5% from 2023 to 2024… Global VC investments came in at a little over $334 billion in 2024, with the U.S. taking the lion’s share.”</p>
+<p>— Joash Lee, <a href="https://www.forbes.com/councils/forbesbusinesscouncil/2025/02/25/five-predictions-for-venture-capital-in-2025/" class="external">Forbes<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+<p>Lee’s perspective identifies several positive trends developing in the VC ecosystem:</p>
+<ol>
+<li>
+<p><strong>Geographic Diversification</strong>: While U.S. remains dominant, smaller ecosystems like Singapore are emerging as regional hubs with impressive per capita VC investment.</p>
+</li>
+<li>
+<p><strong>IPO Market Recovery</strong>: “The initial public offering (IPO) market is also starting to pick up and is expected to bounce back in the second half of the year… IPO activity in the U.S. tends to be 39% higher in post-election years compared to election years.”</p>
+</li>
+<li>
+<p><strong>Web3 Renaissance</strong>: “With some of Wall Street’s biggest names investing in Bitcoin ETFs, it’s gaining mainstream adoption. Bitcoin crossed the historic $100,000 mark moments after Paul Atkin’s appointment as the head of the Securities and Exchange Commission.”</p>
+</li>
+<li>
+<p><strong>AI Sector Expansion</strong>: “AI’s been on a streak, with the sector alone accounting for over 66% of total VC investments in 2024.” Unlike Gerard’s view of an AI monoculture centered on OpenAI, Lee predicts greater diversity in AI applications across sectors.</p>
+</li>
+<li>
+<p><strong>Climate Tech Resilience</strong>: Despite regulatory uncertainty, Lee notes that “AI-backed climate tech companies attracted $6 billion within the first three quarters of 2024, accounting for 14.6% of all climate tech investments—almost double 2023’s numbers.”</p>
+</li>
+</ol>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Personal Notes: Navigating Conflicting Market Signals </p></div>
+                  
+                </div>
+<div class="callout-content">
+<div class="callout-content-inner">
+<p>The stark contrast between Gerard’s apocalyptic view and Lee’s cautious optimism reflects the fragmented nature of today’s VC landscape. As founders, we’re learning to triangulate between these opposing perspectives - understanding that the truth likely lies somewhere in between.
+Gerard’s critique of AI concentration highlights real systemic risks, while Lee’s geographical diversification points to emerging opportunities outside traditional hubs. Rather than picking sides, we’re developing a “resilient opportunism” approach: maintaining the financial discipline Gerard warns is necessary, while still pursuing strategic growth in the emerging sectors Lee identifies. The divergence in expert opinions itself creates asymmetric information opportunities for startups able to see beyond the consensus narratives.</p>
+</div>
+</div>
+</blockquote>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Analysis Note </p></div>
+                  
+                </div>
+<div class="callout-content">
+<div class="callout-content-inner">
+<p>The 2025 data cited in this article is predictive analysis based on current trends. Actual market directions may vary due to multiple factors.
+The views expressed here carry strong personal perspectives and limited industry understanding. For a more objective understanding of the original author’s thinking, please read the original text directly.</p>
+</div>
+</div>
+</blockquote>
+<h2 id="references">References<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#references" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>Gerard, D. (predicted, 2025). In 2025, venture capital can’t pretend everything is fine any more. <em>Pivot to AI</em>. <a href="https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/" class="external">https://pivot-to-ai.com/2025/05/03/in-2025-venture-capital-cant-pretend-everything-is-fine-any-more/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>National Venture Capital Association. (predicted, 2025). Venture Monitor Q1 2025. NVCA.</p>
+</li>
+<li>
+<p>Federal Reserve. (predicted, 2025). Federal Reserve Press Release, April 2025.</p>
+</li>
+<li>
+<p>Synergy Research Group. (predicted, 2025). Global AI Computing Resources Distribution Report.</p>
+</li>
+<li>
+<p>MIT Technology Review. (2023). The Future of Venture Capital: Scenario Planning 2023-2026.</p>
+</li>
+<li>
+<p>FTI Consulting. (predicted, 2025). AI Investment Landscape in 2025: Opportunities in a Volatile Market. <a href="https://www.fticonsulting.com/insights/articles/ai-investment-landscape-2025-opportunities-volatile-market" class="external">https://www.fticonsulting.com/insights/articles/ai-investment-landscape-2025-opportunities-volatile-market<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Lee, J. (predicted, 2025). Five Predictions For Venture Capital In 2025. <em>Forbes</em>. <a href="https://www.forbes.com/councils/forbesbusinesscouncil/2025/02/25/five-predictions-for-venture-capital-in-2025/" class="external">https://www.forbes.com/councils/forbesbusinesscouncil/2025/02/25/five-predictions-for-venture-capital-in-2025/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ol></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-0"><li class="depth-0"><a href="#the-end-game-of-venture-capital-in-2025-when-ai-becomes-the-last-bet" data-for="the-end-game-of-venture-capital-in-2025-when-ai-becomes-the-last-bet">The End Game of Venture Capital in 2025: When AI Becomes the Last Bet</a></li><li class="depth-0"><a href="#core-arguments-deconstructed" data-for="core-arguments-deconstructed">Core Arguments Deconstructed</a></li><li class="depth-1"><a href="#1-trump-tariffs-impact-on-tech-supply-chains" data-for="1-trump-tariffs-impact-on-tech-supply-chains">1. Trump Tariffs’ Impact on Tech Supply Chains</a></li><li class="depth-1"><a href="#2-the-end-of-the-zero-interest-rate-era-and-capital-migration" data-for="2-the-end-of-the-zero-interest-rate-era-and-capital-migration">2. The End of the Zero Interest Rate Era and Capital Migration</a></li><li class="depth-1"><a href="#3-the-ecosystem-dilemma-under-openais-monopoly" data-for="3-the-ecosystem-dilemma-under-openais-monopoly">3. The Ecosystem Dilemma Under OpenAI’s Monopoly</a></li><li class="depth-0"><a href="#structural-opportunity-map" data-for="structural-opportunity-map">Structural Opportunity Map</a></li><li class="depth-1"><a href="#new-approaches-in-failed-exit-mechanisms" data-for="new-approaches-in-failed-exit-mechanisms">New Approaches in Failed Exit Mechanisms</a></li><li class="depth-0"><a href="#scenario-planning" data-for="scenario-planning">Scenario Planning</a></li><li class="depth-1"><a href="#2026-scenario-prediction-matrix" data-for="2026-scenario-prediction-matrix">2026 Scenario Prediction Matrix</a></li><li class="depth-0"><a href="#contrasting-market-perspectives" data-for="contrasting-market-perspectives">Contrasting Market Perspectives</a></li><li class="depth-0"><a href="#references" data-for="references">References</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created by <a href="https://x.com/wenqingyu">Thomas Yu</a> © 2025</p><ul><li><a href="https://github.com/wenqingyu/the2nd-blog">GitHub</a></li><li><a href="#">About</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../postscript.js" type="module"></script></html>
