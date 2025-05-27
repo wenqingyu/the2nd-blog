@@ -1,6 +1,6 @@
 ---
-title: YC Launchpad 2025 冬季与春季回顾和思考
-chineseTitle: YC Launchpad 2025 Winter & Spring Critical Analysis
+title: "YC Launchpad 2025 冬季与春季回顾和思考"
+chineseTitle: "YC Launchpad 2025 Winter & Spring Critical Analysis"
 publish: true
 tags: [research, AI, market-analysis, YC, startups, 中文]
 author: Thomas Yu
@@ -16,15 +16,7 @@ banner: /static/img/research/yc-launchpad-banner.jpg
 
 YC Launchpad 2025 冬季与春季两批（约160家）为「AI吞噬世界」口号提供了首个大样本检验。Datahut统计显示，**72%**的新创公司以AI为核心。本分析剥离炒作，量化融资数学，为创始人与投资人勾勒可落地的退出路径。
 
----
-
-YC Launchpad 2025 冬季与春季两批（约 160 家）为「AI 吞
-噬世界」口号提供了首个大样本检验。Datahut 统计显示，
-**72 %** 的新创公司以 AI 为核心。本指南剥离炒作，量化融资
-数学，为创始人与投资人勾勒可落地的退出路径。
-
 ## 核心市场观察
-
 
 ### 1. 基础设施胜过模型构建
 

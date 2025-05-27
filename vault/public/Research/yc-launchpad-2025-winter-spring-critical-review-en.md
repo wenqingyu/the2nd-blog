@@ -1,6 +1,6 @@
 ---
-title: YC Launchpad 2025 Winter & Spring: A Critical Analysis for AI Founders
-chineseTitle: YC Launchpad 2025 冬季与春季回顾和思考
+title: "YC Launchpad 2025 Winter & Spring: A Critical Analysis for AI Founders"
+chineseTitle: "YC Launchpad 2025 冬季与春季回顾和思考"
 publish: true
 tags: [research, AI, market-analysis, YC, startups, english]
 author: Thomas Yu
